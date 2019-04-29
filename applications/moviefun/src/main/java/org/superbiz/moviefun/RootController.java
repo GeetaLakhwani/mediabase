@@ -1,13 +1,15 @@
 package org.superbiz.moviefun;
 
+
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.superbiz.moviefun.movies.Movie;
 import org.superbiz.moviefun.movies.MoviesBean;
-import org.superbiz.moviefun.podcasts.Podcast;
-import org.superbiz.moviefun.podcasts.PodcastRepository;
 
+import org.superbiz.moviefun.podcast.Podcast;
 import java.util.Map;
+import org.superbiz.moviefun.podcast.PodcastRepository;
+
 
 @Controller
 public class RootController {
