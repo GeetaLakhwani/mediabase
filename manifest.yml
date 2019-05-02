@@ -6,16 +6,18 @@ applications:
       - route: GL-movies-ms.apps.pcf.paltraining.perficient.com
     services:
       - movies-ms-database
+      - -service-regsitry
   - name: podcasts-ms
+
     path: applications/podcasts-ms/build/libs/podcasts-ms-1.0-SNAPSHOT.jar
     routes:
       - route: GL-podcasts-ms.apps.pcf.paltraining.perficient.com
     services:
       - podcasts-ms-database
+      - -service-regsitry
   - name: moviefun
     path: applications/moviefun/build/libs/moviefun-1.0-SNAPSHOT.war
     routes:
       - route: GL-moviefun.apps.pcf.paltraining.perficient.com
-    env:
-      MOVIES_MS_URL: http://GL-movies-ms.apps.pcf.paltraining.perficient.com/movies
-      PODCASTS_MS_URL: http://GL-podcasts-ms.apps.pcf.paltraining.perficient.com/podcasts
+        services:
+          -service-regsitry
