@@ -1,40 +1,48 @@
 package org.superbiz.moviefun.podcast;
 
-
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.List;
+
 
 @RestController
-@RequestMapping("/podcast")
+@RequestMapping("/podcasts")
 public class PodcastController {
 
-    private PodcastRepository podcastRepository;
+    private PodcastRepository podcastClient;
 
-    public PodcastController(PodcastRepository podcastRepository) {
-        this.podcastRepository = podcastRepository;
+    public PodcastController(PodcastRepository moviesBean) {
+        this.podcastClient = moviesBean;
     }
 
     @PostMapping
-    public ResponseEntity<Podcast> create(@RequestBody Podcast podcast) {
+    public ResponseEntity<Podcast> create(@RequestBody Podcast movie) {
 
-        podcastRepository.save(podcast);
+        podcastClient.save(movie);
         return new ResponseEntity<>(HttpStatus.CREATED);
     }
 
     @DeleteMapping("/{id}")
     public ResponseEntity<Podcast> delete(@PathVariable Long id) {
-        Podcast doomed = podcastRepository.findOne(id);
-        if (doomed != null) podcastRepository.delete(doomed.getId());
+        Podcast doomed = podcastClient.findOne(id);
+        if (doomed != null) podcastClient.delete(doomed);
         HttpStatus status = (doomed != null) ? HttpStatus.NO_CONTENT : HttpStatus.NOT_FOUND;
         return new ResponseEntity<>(status);
     }
 
+//    @GetMapping("/count")
+//    public int count(
+//            @RequestParam(value = "field", required = false) String field,
+//            @RequestParam(value = "key", required = false) String key
+//    )
+//    {
+//        return (field != null && key != null) ? podcastClient.count(field, key) : podcastClient.countAll();
+//    }
+
     @GetMapping()
-    public Iterable<Podcast> read(){
-        return podcastRepository.findAll();
+    public Iterable<Podcast> read( ){
+            return podcastClient.findAll();
 
     }
 

@@ -1,14 +1,14 @@
-package org.superbiz.moviefun.podcastsui;
+package org.superbiz.moviefun.podcastui;
 
 import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.http.HttpMethod;
 import org.springframework.web.client.RestOperations;
 import org.springframework.web.util.UriComponentsBuilder;
+import org.superbiz.moviefun.moviesui.MovieUI;
 
 import java.util.List;
 
 public class PodcastClient {
-
     private static ParameterizedTypeReference<List<PodcastUI>> movieListType = new ParameterizedTypeReference<List<PodcastUI>>() {
     };
     private RestOperations restOperations;
@@ -20,8 +20,8 @@ public class PodcastClient {
         this.moviesURL = moviesURL;
     }
 
-    public void create(PodcastUI podcast) {
-        restOperations.postForEntity(moviesURL, podcast, PodcastUI.class);
+    public void create(PodcastUI movie) {
+        restOperations.postForEntity(moviesURL, movie, PodcastUI.class);
     }
 
     public List<PodcastUI> getAll() {
@@ -63,7 +63,4 @@ public class PodcastClient {
         return restOperations.exchange(URI, HttpMethod.GET, null, movieListType).getBody();
 
     }
-
-
-
 }

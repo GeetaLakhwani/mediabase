@@ -1,3 +1,8 @@
+package org.superbiz.moviefun.moviesui;
+
+
+
+
 /**
  * Licensed to the Apache Software Foundation (ASF) under one or more
  * contributor license agreements.  See the NOTICE file distributed with
@@ -14,15 +19,13 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.superbiz.moviefun.moviesui;
 
 
-import java.io.Serializable;
 
 
-public class MovieUI implements Serializable {
+public class MovieUI  {
 
-    private static final long serialVersionUID = 1L;
+
 
 
     private long id;

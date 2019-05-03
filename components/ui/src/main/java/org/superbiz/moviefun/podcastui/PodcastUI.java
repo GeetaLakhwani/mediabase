@@ -1,16 +1,17 @@
-package org.superbiz.moviefun.podcastsui;
-
-import java.io.Serializable;
+package org.superbiz.moviefun.podcastui;
 
 
-public class PodcastUI implements Serializable {
+
+
+
+
+public class PodcastUI  {
 
     private static final long serialVersionUID = 1L;
 
     private String title;
     private String description;
     private String url;
-
 
     private Long id;
 

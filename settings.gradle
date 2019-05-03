@@ -1,10 +1,8 @@
 rootProject.name = 'moviefun'
 include "applications:moviefun"
-include "components:podcast"
 include "components:movies"
+include "components:podcasts"
 include "applications:movies-ms"
 include "components:ui"
-include "applications:podcast-ms"
-
-
+include "applications:podcasts-ms"
 
