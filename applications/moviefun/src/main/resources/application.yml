@@ -1,5 +1,7 @@
+
 server:
   port: 8080
+
 spring:
   application:
     name: moviefun
@@ -10,6 +12,7 @@ spring:
 
 logging.level:
   root: WARN
+
   org.superbiz.moviefun.podcastsUI: DEBUG
 
 hystrix:
@@ -20,3 +23,6 @@ hystrix:
           thread:
             timeoutInMilliseconds: 5000
 
+
+#movies.ms.url: http://localhost:8081/movies
+#podcast.ms.url: http://localhost:8082/podcasts

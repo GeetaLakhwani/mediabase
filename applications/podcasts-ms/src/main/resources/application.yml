@@ -3,11 +3,18 @@ server.port: 8082
 spring:
   application:
     name: podcasts-ms
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4b51944f9d620e9ca7fc8b26d77e8b731d1244cc
   jpa:
     generate-ddl: true
     properties.hibernate.dialect: org.hibernate.dialect.MySQL5Dialect
 
   datasource:
+<<<<<<< HEAD
     url: jdbc:mysql://localhost:3306/podcasts?useSSL=false
+=======
+    url: jdbc:mysql://localhost:3306/movies?useSSL=false
+>>>>>>> 4b51944f9d620e9ca7fc8b26d77e8b731d1244cc
     username: root

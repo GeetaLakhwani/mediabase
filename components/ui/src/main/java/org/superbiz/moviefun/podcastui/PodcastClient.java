@@ -1,4 +1,4 @@
-package org.superbiz.moviefun.podcastsui;
+package org.superbiz.moviefun.podcastui;
 
 
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
@@ -8,6 +8,7 @@ import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.http.HttpMethod;
 import org.springframework.web.client.RestOperations;
 import org.springframework.web.util.UriComponentsBuilder;
+import org.superbiz.moviefun.moviesui.MovieUI;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -86,10 +87,13 @@ public class PodcastClient {
         return restOperations.exchange(URI, HttpMethod.GET, null, movieListType).getBody();
 
     }
+<<<<<<< HEAD:components/ui/src/main/java/org/superbiz/moviefun/podcastsui/PodcastClient.java
 
     public PodcastUI find(Long id) {
         String findURL = new StringBuilder(moviesURL).append("/").append(id).toString();
         return restOperations.getForEntity(findURL, PodcastUI.class).getBody();
     }
 
+=======
+>>>>>>> 4b51944f9d620e9ca7fc8b26d77e8b731d1244cc:components/ui/src/main/java/org/superbiz/moviefun/podcastui/PodcastClient.java
 }
