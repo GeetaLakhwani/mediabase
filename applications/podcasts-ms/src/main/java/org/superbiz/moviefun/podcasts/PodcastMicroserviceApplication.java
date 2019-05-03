@@ -9,7 +9,7 @@ import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 @EnableEurekaClient
 public class PodcastMicroserviceApplication {
 
-    public static void main(String... args) {
+ public static void main(String... args) {
         SpringApplication.run(PodcastMicroserviceApplication.class, args);
     }
 }
