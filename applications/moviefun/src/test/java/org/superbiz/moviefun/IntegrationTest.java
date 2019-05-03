@@ -22,7 +22,7 @@ public class IntegrationTest {
         assertThat(setupPage, containsString("TED Radio Hour"));
         assertThat(setupPage, containsString("Fresh Air"));
 
-        String podcastsPage = restTemplate.getForObject(url("/podcast"), String.class);
+        String podcastsPage = restTemplate.getForObject(url("/podcasts"), String.class);
 
         assertThat(podcastsPage, containsString("TED Radio Hour"));
         assertThat(podcastsPage, containsString("Fresh Air"));

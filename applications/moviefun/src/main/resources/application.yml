@@ -1,12 +1,22 @@
 server:
-  port: 8080
+  port: 8080
 spring:
   application:
     name: moviefun
-  mvc.view:
-    prefix: /WEB-INF/
-    suffix: .jsp
+
+  mvc.view:
+    prefix: /WEB-INF/
+    suffix: .jsp
 
 logging.level:
-  root: WARN
+  root: WARN
+  org.superbiz.moviefun.podcastsUI: DEBUG
+
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 5000
 

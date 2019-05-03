@@ -1,4 +1,4 @@
-package org.superbiz.moviefun.podcast;
+package org.superbiz.moviefun.podcasts;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

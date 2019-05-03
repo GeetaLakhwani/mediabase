@@ -2,7 +2,6 @@ package org.superbiz.moviefun.podcastsui;
 
 import java.io.Serializable;
 
-
 public class PodcastUI implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -10,7 +9,6 @@ public class PodcastUI implements Serializable {
     private String title;
     private String description;
     private String url;
-
 
     private Long id;
 
@@ -54,4 +52,5 @@ public class PodcastUI implements Serializable {
     public void setId(Long id) {
         this.id = id;
     }
+
 }

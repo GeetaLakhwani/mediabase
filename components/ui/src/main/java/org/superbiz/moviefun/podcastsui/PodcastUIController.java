@@ -5,24 +5,18 @@ import org.springframework.web.bind.annotation.GetMapping;
 
 import java.util.Map;
 
+@Controller
+public class PodcastUIController {
+    private PodcastClient podcastClient;
 
-
-    @Controller
-    public class PodcastUIController {
-        private PodcastClient podcastClient;
-
-        public PodcastUIController(PodcastClient podcastClient) {
-            this.podcastClient =podcastClient;
-        }
-
-        @GetMapping("/podcast")
-        public String allPodcasts(Map<String, Object> model) {
-            model.put("podcast", podcastClient.getAll());
-            return "podcast";
-        }
-
+    public PodcastUIController(PodcastClient podcastClient) {
+        this.podcastClient = podcastClient;
     }
 
+    @GetMapping("/podcasts")
+    public String allPodcasts(Map<String, Object> model) {
+        model.put("podcasts", podcastClient.getAll() );
+        return "podcasts";
+    }
 
-
-
+}
