@@ -1,11 +1,12 @@
 server:
   port: 8080
 spring:
+  application:
+    name: moviefun
   mvc.view:
     prefix: /WEB-INF/
     suffix: .jsp
-  application:
-    name: moviefun
+
 logging.level:
   root: WARN
 
