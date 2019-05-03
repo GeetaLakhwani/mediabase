@@ -3,7 +3,6 @@ buildscript {
         springBootVersion = "1.5.17.RELEASE"
         SCSClientStartersVersion = "1.6.6.RELEASE"
         SCVersion = "Edgware.RELEASE"
-       
     }
 
     repositories {
@@ -15,8 +14,6 @@ buildscript {
         classpath('io.spring.gradle:dependency-management-plugin:1.0.5.RELEASE')
     }
 }
-
-
 
 
 
