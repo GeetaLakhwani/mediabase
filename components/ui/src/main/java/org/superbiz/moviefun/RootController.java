@@ -38,7 +38,7 @@ public class RootController {
         movieClent.create(new MovieUI("Zoolander", "Ben Stiller", "Comedy", 6, 2001));
         movieClent.create(new MovieUI("Shanghai Noon", "Tom Dey", "Comedy", 7, 2000));
 
-        model.put("podcasts", movieClent.getAll());
+        model.put("podcast", movieClent.getAll());
 
         podcastClient.create(new PodcastUI("Wait Wait...Don't Tell Me!",
                 "NPR's weekly current events quiz.",
@@ -53,7 +53,7 @@ public class RootController {
                 "The NPR Politics Podcast is where NPR's political reporters talk to you like they talk to each other.",
                 "https://www.npr.org/sections/politics/"));
 
-        model.put("podcasts", podcastClient.getAll());
+        model.put("podcast", podcastClient.getAll());
 
         return "setup";
     }

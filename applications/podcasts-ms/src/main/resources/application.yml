@@ -3,7 +3,7 @@ server.port: 8090
 spring:
 
   application:
-    name: podcasts-ms
+    name: podcast-ms
   jpa:
     generate-ddl: true
     properties.hibernate.dialect: org.hibernate.dialect.MySQL5Dialect
@@ -11,5 +11,5 @@ spring:
 
 
   datasource:
-    url: jdbc:mysql://localhost:3306/podcasts?useSSL=false
+    url: jdbc:mysql://localhost:3306/podcast?useSSL=false
     username: root

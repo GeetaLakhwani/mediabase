@@ -7,12 +7,12 @@ applications:
     services:
       - movies-ms-database
       - service-registry
-  - name: podcasts-ms
-    path: applications/podcasts-ms/build/libs/podcasts-ms-1.0-SNAPSHOT.jar
+  - name: podcast-ms
+    path: applications/podcast-ms/build/libs/podcast-ms-1.0-SNAPSHOT.jar
     routes:
-      - route: GL-podcasts-ms.apps.pcf.paltraining.perficient.com
+      - route: GL-podcast-ms.apps.pcf.paltraining.perficient.com
     services:
-      - podcasts-ms-database
+      - podcast-ms-database
       - service-registry
   - name: moviefun
     path: applications/moviefun/build/libs/moviefun-1.0-SNAPSHOT.war

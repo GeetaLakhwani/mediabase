@@ -1,4 +1,4 @@
-package org.superbiz.moviefun.podcasts;
+package org.superbiz.moviefun.podcast;
 import org.springframework.boot.*;
 import org.springframework.boot.autoconfigure.*;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;

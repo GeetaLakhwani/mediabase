@@ -15,10 +15,10 @@ import java.util.Map;
             this.podcastClient =podcastClient;
         }
 
-        @GetMapping("/podcasts")
+        @GetMapping("/podcast")
         public String allPodcasts(Map<String, Object> model) {
-            model.put("podcasts", podcastClient.getAll());
-            return "podcasts";
+            model.put("podcast", podcastClient.getAll());
+            return "podcast";
         }
 
     }

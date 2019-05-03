@@ -47,7 +47,7 @@ public class Application {
     @LoadBalanced
     @Bean
     public PodcastClient podcastClient(RestOperations restOperations) {
-        return new PodcastClient("//podcasts-ms/podcasts", restOperations);
+        return new PodcastClient("//podcast-ms/podcast", restOperations);
     }
 
 }
