@@ -1,6 +1,5 @@
 package org.superbiz.moviefun.podcastsui;
 
-
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -11,7 +10,6 @@ import org.springframework.web.util.UriComponentsBuilder;
 
 import java.util.ArrayList;
 import java.util.List;
-
 public class PodcastClient {
     private static ParameterizedTypeReference<List<PodcastUI>> movieListType = new ParameterizedTypeReference<List<PodcastUI>>() {
     };
@@ -32,7 +30,8 @@ public class PodcastClient {
         restOperations.postForEntity(moviesURL, movie, PodcastUI.class);
     }
 
-    @HystrixCommand(fallbackMethod="getAllFallback")
+
+    @HystrixCommand(fallbackMethod = "getAllFallback")
     public List<PodcastUI> getAll() {
         List<PodcastUI> read = restOperations.exchange(moviesURL, HttpMethod.GET, null, movieListType).getBody();
         log.debug("Read {} podcasts from {}", read.size(), moviesURL);
