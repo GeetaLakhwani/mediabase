@@ -7,7 +7,7 @@ applications:
     services:
       - movies-ms-database
       - service-registry
-       - mediabase-sso
+      - mediabase-sso
       env:
         GRANT_TYPE: client_credentials
   - name: podcasts-ms
